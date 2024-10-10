@@ -7,11 +7,10 @@
 </head>
 <body>
     <div class="container">
+        <img src="../assets/images/team.png" id ='img-team'/>
         <h1>Game đố vui</h1>
         <div class="button-container">
-            <button id = "btn-tritue" onclick="goToPage('cauhoitritue')">Câu đố trí tuệ</button>
-            <button id = 'btn-domeo' onclick="goToPage('cauhoidomeo')">Câu đố mẹo</button>
-            <button id = 'btn-luatchoi' onclick="goToPage('huongdanchoi')">Luật chơi</button>
+            <button id = "btn-batdau">Bắt đầu</button>
         </div>
     </div>
 </body>
@@ -37,29 +36,38 @@
         background-position: center;
         display: flex;
         flex-direction: column;
-        justify-content: center;
         align-items: center;
         border-radius: 10px;
+        position: relative;
+    }
+    #img-team {
+        position:absolute;
+        width: 150px;
+        height:90px;
+        top: 0px;
+        left: -25px;
+        object-fit: contain;
     }
 
     h1 {
         color: black;
         font-size: 4em;
         text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
-        margin: 0;
+        margin-top: 50px;
     }
 
     .button-container {
         display: flex;
         flex-direction: column;
         width: 200px;
+        margin-top: 80px;
     }
 
     button {
         background-color: #4CAF50;
-        color: black;
+        color: white;
         padding: 15px;
-        font-size: 16px;
+        font-size: 40px;
         font-weight: 600;
         border: none;
         margin: 10px 0;
@@ -67,20 +75,9 @@
         border-radius: 15px;
         transition: background-color 0.3s;
     }
-    #btn-tritue {
-        background-color: #E54F4F;
-    }
-    #btn-domeo {
-        background-color: #6CE96A;
-    }
-    #btn-luatchoi {
+   
+    #btn-batdau {
         background-color: #54CAF7;
     }
 </style>
-<script>
-    // Hàm chuyển trang và truyền ID nút qua URL
-    function goToPage(buttonType) {
-        window.location.href = `startscreen.html?type=${buttonType}`;
-    }
-</script>
 </html>
