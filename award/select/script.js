@@ -1,10 +1,38 @@
-function animateGift(gift) {
-    // Add an animation class to the clicked gift (optional, if you want an animation)
-    gift.classList.add('animate');
-
-    // Wait for the animation to finish (if any), then redirect
+function playClickSound() {
+    const clickSound = new Audio('/assets/sounds/select-gift.mp3');
+    clickSound.currentTime = 0.3;  // Reset the audio to the beginning
+    clickSound.play();  // Play the audio
     setTimeout(function() {
-        // Redirect to another page, e.g., "reward.html"
-        window.location.href = "/award/result/index.html";
-    }, 600);  // Adjust the delay to match the length of your animation
+        clickSound.pause();  // Pause the audio
+        clickSound.currentTime = 0.3;  // Reset the audio to the start
+    }, 2800);  // Stop
 }
+
+function animateGift(gift) {
+    // Get all gifts
+    const allGifts = document.querySelectorAll('.gift');
+
+    // Disable all gifts to prevent additional clicks
+    allGifts.forEach(g => {
+        g.classList.add('disabled');
+        g.classList.remove('active'); // Remove any previous animations
+    });
+
+    // Add 'active' class to the clicked gift to start the animation
+    gift.classList.add('active');
+
+    // Wait for the animation to complete, then re-enable the gifts
+    setTimeout(function() {
+        // Enable the gifts after animation completes
+        allGifts.forEach(g => g.classList.remove('disabled'));
+
+        // Redirect to the result page (you can adjust this as needed)
+        window.location.href = "/award/result/index.html";
+    }, 2800);  // Adjust the delay to match your animation duration
+
+
+    gift.addEventListener('click', playClickSound());
+}
+
+
+
