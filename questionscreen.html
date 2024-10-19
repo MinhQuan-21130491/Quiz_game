@@ -9,22 +9,26 @@
     <div class="container">
         <img src="../assets/images/team.png" id ='img-team'/>
         <div class="timer-container">
-            00:<span id="time">00</span> 
+            00:<span id="timer">00</span> 
         </div>
         <div id = 'contain-question-title'>
             <h1 id = "question-title">Câu hỏi 1:</h1>
-            <p id = "question">Con bò màu gì?</p>
+            <pre id = "question">Con bò màu gì?</pre>
         </div>
         <div class="btn-answer">
-            <button id = "btn-A">Xanh</button>
-            <button id = "btn-B">Đỏ</button>
-            <button id = "btn-C">Tím</button>
-            <button id = "btn-D">Vàng</button>
+            <button class="txtbtn" id = "btn-A" value="a">Xanh</button>
+            <button class="txtbtn" id = "btn-B" value="b">Đỏ</button>
+            <button class="txtbtn" id = "btn-C" value="c">Tím</button>
+            <button class="txtbtn" id = "btn-D" value="d">Vàng</button>
         </div>
         <div id = '#contain-btn-next'>
             <img src="../assets/images/btnnext.png" id = "btn-next" />
         </div>
     </div>
+    <audio id="timer-sound" src="../assets/sounds/time.mp3"></audio>
+    <audio id="correct-sound" src="../assets/sounds/correct.mp3"></audio>
+    <audio id="wrong-sound" src="../assets/sounds/wrong.mp3"></audio>
+
 </body>
 <style>
     body {
@@ -75,6 +79,7 @@
     }
     #question {
         margin-top: 5px;
+        font-family: Arial, Helvetica, sans-serif;
     }
     .btn-answer {
     display: flex;
@@ -110,10 +115,38 @@
     background-color: #FFC7C7;
     border-radius: 99px;
     padding:10px;
+    position: absolute;
+    bottom:50px;
+    right: 150px;
+}
+.txtbtn {
+font-weight: bold;
+}
+.hover {
+    background-color:#ffcc33  !important;
+}
+/* Hiệu ứng nhấp nháy */
+.blink {
+    animation: blink-background-animation 0.5s ease-in-out 3; 
+}
+
+@keyframes blink-background-animation {
+    0% {
+        background-color: #C9C9C9;
+    }
+    50% {
+        background-color: #33cc33;
+    }
+    100% {
+        background-color: #C9C9C9;
+    }
+}
+.no-hover {
+    pointer-events: none; /* Ngăn chặn tất cả các sự kiện chuột */
 
 }
 </style>
-<script>
-    
-</script>
+<script src="question.js"> </script>
+<script src="index.js"> </script>
+
 </html>

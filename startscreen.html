@@ -10,7 +10,7 @@
         <img src="../assets/images/team.png" id ='img-team'/>
         <h1>Game đố vui</h1>
         <div class="button-container">
-            <button id = "btn-batdau">Bắt đầu</button>
+            <button id = "btn-batdau" onclick="goToQuestionsScreen()">Bắt đầu</button>
         </div>
     </div>
 </body>
@@ -81,6 +81,15 @@
     }
 </style>
 <script>
-    
+        function getQueryParameter(param) {
+            const urlParams = new URLSearchParams(window.location.search);
+            return urlParams.get(param);
+        }
+        function goToQuestionsScreen() {
+        const buttonType = getQueryParameter('type'); // Lấy giá trị type từ URL
+        window.location.href = `questionscreen.html?type=${buttonType}`; // Chuyển đến trang questionscreen.html với tham số type
+    }
 </script>
+<script src="index.js"> </script>
+
 </html>
