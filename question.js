@@ -474,7 +474,12 @@ const questionTrivia = [
     correctAnswer: "b",
   },
 ];
-let currentQuestionIndex = 0;
+let currentQuestionIndex = parseInt(
+  localStorage.getItem("currentQuestionIndex")
+);
+console.log("====================================");
+console.log(currentQuestionIndex);
+console.log("====================================");
 
 // Lấy các phần tử DOM
 const questionTitleElement = document.getElementById("question-title");
@@ -560,13 +565,19 @@ function checkAnswer(selectedAnswerButton, selectedAnswer) {
     // Thêm hiệu ứng nhấp nháy cho đáp án đúng
     highlightCorrectAnswerWithBlink();
 
-    // Nếu câu trả lời là đúng, có thể thêm logic phần thưởng ở đây
+    // Nếu câu trả lời là đúng
     if (isCorrect) {
       correctSound.play();
       timerSound.pause();
+      setTimeout(function () {
+        window.location.href = "/award/select/index.html";
+      }, 2000);
     } else {
       wrongSound.play();
       timerSound.pause();
+      setTimeout(function () {
+        window.location.href = "/penalty/index.html";
+      }, 2000);
       selectedAnswerButton.style.backgroundColor = "red";
     }
   }, 1000); // Thời gian đợi 2 giây trước khi hiển thị kết quả
@@ -596,26 +607,6 @@ function highlightCorrectAnswerWithBlink() {
     correctButton.classList.remove("blink"); // Xóa lớp 'blink' sau khi nhấp nháy
   }, 4000); // Hiệu ứng nhấp nháy trong 3 giây
 }
-// Chuyển đến câu hỏi tiếp theo
-nextButton.addEventListener("click", () => {
-  let questions = "";
-  if (getQueryParameter("type") === "cauhoitritue") {
-    questions = questionsIntell;
-  } else {
-    questions = questionTrivia;
-  }
-  clearInterval(timerInterval);
-  currentQuestionIndex++;
-  if (currentQuestionIndex >= questions.length) {
-    alert("Bạn đã hoàn thành tất cả các câu hỏi!");
-    return;
-  }
-  resetQuestion();
-  displayQuestion();
-  timeLeft = 15; // Đặt lại thời gian
-  startTimer();
-});
-
 // Đặt lại trạng thái câu hỏi và giao diện
 function resetQuestion() {
   for (let key in answerButtons) {

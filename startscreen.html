@@ -47,6 +47,7 @@
         top: 0px;
         left: -25px;
         object-fit: contain;
+        cursor: pointer;
     }
 
     h1 {
@@ -86,6 +87,7 @@
             return urlParams.get(param);
         }
         function goToQuestionsScreen() {
+        localStorage.setItem('currentQuestionIndex', 0);
         const buttonType = getQueryParameter('type'); // Lấy giá trị type từ URL
         window.location.href = `questionscreen.html?type=${buttonType}`; // Chuyển đến trang questionscreen.html với tham số type
     }

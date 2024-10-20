@@ -12,7 +12,7 @@
         <div class="button-container">
             <button id = "btn-tritue" onclick="goToPage('cauhoitritue')">Câu đố trí tuệ</button>
             <button id = 'btn-domeo' onclick="goToPage('cauhoidomeo')">Câu đố mẹo</button>
-            <button id = 'btn-luatchoi' onclick="goToPage('huongdanchoi')">Luật chơi</button>
+            <button id = 'btn-luatchoi' onclick="goToPageGuide()">Luật chơi</button>
         </div>
     </div>
 </body>
@@ -50,6 +50,7 @@
         top: 0px;
         left: -25px;
         object-fit: contain;
+        cursor: pointer;
     }
     h1 {
         color: black;
@@ -87,9 +88,11 @@
     }
 </style>
 <script>
-    // Hàm chuyển trang và truyền ID nút qua URL
     function goToPage(buttonType) {
         window.location.href = `startscreen.html?type=${buttonType}`;
+    }
+       function goToPageGuide() {
+        window.location.href = "rule/index.html";
     }
 </script>
 </html>

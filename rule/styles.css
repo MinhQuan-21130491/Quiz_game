@@ -11,20 +11,32 @@
 }
 
 body {
-    width: 80vw;
-    height: 80vh;
-    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
     padding: 0;
     font-family: Arial, sans-serif;
-    background-image: url("/assets/images/background-1.jpg");
-    background-size: cover; /* Ensures the image covers the entire area */
-    background-position: center; /* Centers the image within the body */
-    background-repeat: no-repeat; /* Prevents the image from repeating */
+    background-color: #f0f0f0;
 }
 
 .container {
-    text-align: center;
-    padding: 20px;
+    width: 90%;
+        max-width: 1000px;
+        height: 80%;
+        max-height: 600px;
+        background-image: url("/assets/images/background-2.jpg");
+        background-size: cover; /* Ensures the image covers the entire area */
+        background-position: center; /* Centers the image within the body */
+        background-repeat: no-repeat; /* Prevents the image from repeating */
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        border-radius: 10px;
+        position: relative;
+
 }
 
 .header {
@@ -33,12 +45,15 @@ body {
     align-items: center;
 }
 
-.logo {
-    width: 240px;
-    height: 240px;
-    margin-right: 10px;
+#img-team {
+    position:absolute;
+    width: 150px;
+    height:90px;
+    top: 0px;
+    left: -25px;
+    object-fit: contain;
+    cursor: pointer;
 }
-
 .header-text h2 {
     margin: 0;
     font-size: 24px;
@@ -58,10 +73,6 @@ body {
     margin-left: 240px;
 }
 
-
-
-
-
 .rule-box {
     margin: auto;
     background-color: #f8b26a;
@@ -75,29 +86,9 @@ body {
 }
 
 .rule-box li {
-    font-size: 20px;
+    font-size: 16px;
     color: rgb(8, 8, 8);
     text-align: start;
-    padding: 12px;
-}
-
-
-.close-button {
-    width: 150px;
-    height: 50px;
-    background-color: #ff5151;
-    color: white;
-    font-size: 24px;
-    font-weight: 600;
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-}
-
-.close-button:hover {
-    background-color: #e46a6a;
-    transform: translateX(5px); /* Move the button 5px to the right */
-    transition: transform 0.3s; /* Smooth transition for the transform */
+    line-height:30px;
 }
 
