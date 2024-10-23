@@ -21,6 +21,12 @@
             <button class="txtbtn" id = "btn-C" value="c">Tím</button>
             <button class="txtbtn" id = "btn-D" value="d">Vàng</button>
         </div>
+        <div id="btn-next">
+            <p class="txtbtn">Next</p>
+        </div>
+        <div id="btn-back">
+            <p class="txtbtn">Back</p>
+        </div>
     </div>
     <audio id="timer-sound" src="../assets/sounds/time.mp3"></audio>
     <audio id="correct-sound" src="../assets/sounds/correct.mp3"></audio>
@@ -37,6 +43,9 @@
         padding: 0;
         font-family: Arial, sans-serif;
         background-color: #f0f0f0;
+        background-image: url('https://static.vecteezy.com/system/resources/previews/009/877/673/non_2x/pixel-art-sky-background-with-clouds-cloudy-blue-sky-for-8bit-game-on-white-background-vector.jpg'); /* Replace with your background image */
+        background-size: cover;
+        background-position: center;
     }
     #contain-question-title {
         background-color: #EEAC5F;
@@ -48,8 +57,8 @@
     }
     .container {
         width: 90%;
-        max-width: 1000px;
-        height: 80%;
+        max-width: 1200px;
+        height: 90%;
         max-height: 600px;
         background-image: url('../assets/images/background-1.jpg'); /* Replace with your background image */
         background-size: cover;
@@ -117,9 +126,30 @@
     position: absolute;
     bottom:50px;
     right: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 .txtbtn {
 font-weight: bold;
+margin: 0;
+}
+#btn-back {
+    width: 40px;
+    height: 40px;
+    background-color: #FFC7C7;
+    border-radius: 99px;
+    padding:10px;
+    position: absolute;
+    bottom:50px;
+    left: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.txtbtn {
+font-weight: bold;
+margin: 0;
 }
 .hover {
     background-color:#ffcc33  !important;

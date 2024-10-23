@@ -12,6 +12,8 @@
         <div class="button-container">
             <button id = "btn-batdau" onclick="goToQuestionsScreen()">Bắt đầu</button>
         </div>
+        <audio id="bg-sound" src="../assets/sounds/sound-bg.mp3"  preload="auto" autoplay loop></audio>
+
     </div>
 </body>
 <style>
@@ -24,12 +26,15 @@
         padding: 0;
         font-family: Arial, sans-serif;
         background-color: #f0f0f0;
+        background-image: url('https://static.vecteezy.com/system/resources/previews/009/877/673/non_2x/pixel-art-sky-background-with-clouds-cloudy-blue-sky-for-8bit-game-on-white-background-vector.jpg'); /* Replace with your background image */
+        background-size: cover;
+        background-position: center;
     }
 
     .container {
         width: 90%;
-        max-width: 1000px;
-        height: 80%;
+        max-width: 1200px;
+        height: 90%;
         max-height: 600px;
         background-image: url('../assets/images/background-1.jpg'); /* Replace with your background image */
         background-size: cover;
@@ -82,15 +87,46 @@
     }
 </style>
 <script>
+    let questionsIntell = {};
+    let questionsTrivia = {};
+    function loadQuestionsIntell() {
+  fetch("questionsIntell.txt")
+    .then((res) => {
+      return res.text();
+    })
+    .then((data) => {
+      questionsIntell = JSON.parse(data);
+      localStorage.setItem("lengthQuestionIntell", questionsIntell.length);
+    });
+}
+function loadQuestionsTrivia() {
+  fetch("questionsTrivia.txt")
+    .then((res) => {
+      return res.text();
+    })
+    .then((data) => {
+      questionsTrivia = JSON.parse(data);
+      localStorage.setItem("lengthQuestionTrivia", questionsTrivia.length);
+
+    });
+}
+
         function getQueryParameter(param) {
             const urlParams = new URLSearchParams(window.location.search);
             return urlParams.get(param);
         }
         function goToQuestionsScreen() {
         localStorage.setItem('currentQuestionIndex', 0);
-        const buttonType = getQueryParameter('type'); // Lấy giá trị type từ URL
-        window.location.href = `questionscreen.html?type=${buttonType}`; // Chuyển đến trang questionscreen.html với tham số type
+        localStorage.setItem('type', getQueryParameter('type'));
+
+        window.location.href = `questionscreen.html`
     }
+    const bgSound = document.getElementById("bg-sound");
+    window.onload = function () {
+        bgSound.play()
+        loadQuestionsIntell();
+        loadQuestionsTrivia();
+};
 </script>
 <script src="index.js"> </script>
 

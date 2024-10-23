@@ -1,3 +1,5 @@
+// Function đọc file và lưu vào biến
+
 function playClickSound() {
   const clickSound = new Audio("/assets/sounds/forward-btn.mp3");
   clickSound.currentTime = 0; // Reset the audio to the beginning
@@ -12,7 +14,6 @@ document.addEventListener("DOMContentLoaded", function () {
   const boomElement = document.querySelector(".boom");
   const messagePanel = document.getElementById("messagePanel");
   const nextButton = document.getElementById("nextButton");
-
   // Trigger the explosion animation after a delay
   setTimeout(() => {
     boomElement.style.animation = "explode 2s forwards"; // Start the explosion
@@ -22,7 +23,38 @@ document.addEventListener("DOMContentLoaded", function () {
   boomElement.addEventListener("animationend", () => {
     // Show the message panel and button with fade-in effect
     messagePanel.classList.add("show"); // Add class to trigger CSS transition
-    nextButton.classList.remove("next-button-hide");
+
+    const nextButton = document.getElementById("nextButton");
+
+    const currentQuestionIndex = parseInt(
+      localStorage.getItem("currentQuestionIndex")
+    );
+    const lengthQuestionIntell = parseInt(
+      localStorage.getItem("lengthQuestionIntell")
+    );
+    const lengthQuestionTrivia = parseInt(
+      localStorage.getItem("lengthQuestionTrivia")
+    );
+    const questionType = localStorage.getItem("type"); // Lấy loại câu hỏi
+
+    // Kiểm tra xem câu hỏi hiện tại có phải là câu hỏi cuối cùng không
+    let isLastQuestion = false;
+
+    if (questionType === "cauhoitritue") {
+      isLastQuestion = currentQuestionIndex >= lengthQuestionIntell - 1;
+    } else if (questionType === "cauhoidomeo") {
+      isLastQuestion = currentQuestionIndex >= lengthQuestionTrivia - 1;
+    }
+
+    // Ẩn nút "Next" nếu là câu hỏi cuối cùng
+    if (isLastQuestion) {
+      nextButton.classList.add("next-button-hide");
+      setTimeout(function () {
+        alert("Đã hết câu hỏi!");
+      }, 3000);
+    } else {
+      nextButton.classList.remove("next-button-hide");
+    }
   });
 
   // Chuyển đến câu hỏi tiếp theo

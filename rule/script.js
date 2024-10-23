@@ -11,3 +11,7 @@ const homeBtn = document.getElementById("img-team");
 homeBtn.addEventListener("click", () => {
   window.location.href = "../index.html";
 });
+const bgSound = document.getElementById("bg-sound");
+window.onload = function () {
+  bgSound.play();
+};

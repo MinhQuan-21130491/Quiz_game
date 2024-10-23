@@ -1,0 +1,233 @@
+[
+  {
+    "title": "1",
+    "question": "Cái gì mỗi ngày phải gỡ ra mới có công dụng",
+    "answers": {
+      "a": "Lịch",
+      "b": "Đồng hồ",
+      "c": "Sổ tay",
+      "d": "Quạt điện"
+    },
+    "correctAnswer": "a"
+  },
+  {
+    "title": "2",
+    "question": "Con gì sinh ra đạo đức đã không tốt?",
+    "answers": {
+      "a": "Con mèo",
+      "b": "Con lừa",
+      "c": "Con voi",
+      "d": "Con rắn"
+    },
+    "correctAnswer": "b"
+  },
+  {
+    "title": "3",
+    "question": "Cái gì luôn muốn đi đến mà không bao giờ đến được?",
+    "answers": {
+      "a": "Đường chân trời",
+      "b": "Mặt trời",
+      "c": "Thời gian",
+      "d": "Xe buýt"
+    },
+    "correctAnswer": "a"
+  },
+  {
+    "title": "4",
+    "question": "Cái gì của bạn nhưng người khác sử dụng nhiều hơn bạn?",
+    "answers": {
+      "a": "Điện thoại của bạn",
+      "b": "Tên của bạn",
+      "c": "Nhà của bạn",
+      "d": "Máy tính của bạn"
+    },
+    "correctAnswer": "b"
+  },
+  {
+    "title": "5",
+    "question": "Lông của gấu bắc cực có màu gì?",
+    "answers": {
+      "a": "Trong suốt",
+      "b": "Trắng",
+      "c": "Đen",
+      "d": "Xám"
+    },
+    "correctAnswer": "a"
+  },
+  {
+    "title": "6",
+    "question": "Con gì có chân nhưng không biết đi?",
+    "answers": {
+      "a": "Con nít",
+      "b": "Con lừa",
+      "c": "Con voi",
+      "d": "Con rắn"
+    },
+    "correctAnswer": "a"
+  },
+  {
+    "title": "7",
+    "question": "Con gì đầu dê mình ốc?",
+    "answers": {
+      "a": "Con sên",
+      "b": "Con cừu",
+      "c": "Con voi",
+      "d": "Con ếch"
+    },
+    "correctAnswer": "a"
+  },
+  {
+    "title": "8",
+    "question": "Động vật có nhiều răng nhất?",
+    "answers": {
+      "a": "Voi",
+      "b": "Ngựa",
+      "c": "Cá mập",
+      "d": "Con rắn"
+    },
+    "correctAnswer": "c"
+  },
+  {
+    "title": "9",
+    "question": "Chim nào có thể bay lùi?",
+    "answers": {
+      "a": "Chim ruồi",
+      "b": "Chim đại bàng",
+      "c": "Con sáo",
+      "d": "Con cánh cụt"
+    },
+    "correctAnswer": "a"
+  },
+  {
+    "title": "10",
+    "question": "Trên lông dưới lông, tối lồng thành một đống, là gì?",
+    "answers": {
+      "a": "Đôi mắt",
+      "b": "Mái tóc",
+      "c": "Lông mày",
+      "d": "Râu"
+    },
+    "correctAnswer": "a"
+  },
+  {
+    "title": "11",
+    "question": "Ruột thẳng băng \nKhi thịt bị cắt khỏi thân \nThì ruột lòi dần vẫn thẳng như rưới?",
+    "answers": {
+      "a": "Cái ống hút",
+      "b": "Cái thước",
+      "c": "Con rắn",
+      "d": "Cây bút chì"
+    },
+    "correctAnswer": "d"
+  },
+  {
+    "title": "12",
+    "question": "Da trắng muốt \nRuột trắng tinh \nBạn với với học sinh \nThích cọ đầu vào bảng?",
+    "answers": {
+      "a": "Cục tẩy",
+      "b": "Cục phấn",
+      "c": "Bút chì",
+      "d": "Bảng đen"
+    },
+    "correctAnswer": "b"
+  },
+  {
+    "title": "13",
+    "question": "Có chân mà chẳng biết đi \nCó mặt phẳng lì chi kẻ ngồi trên \nLà cái gì?",
+    "answers": {
+      "a": "Cái ghế",
+      "b": "Cái bàn",
+      "c": "Cái quạt",
+      "d": "Cái tủ"
+    },
+    "correctAnswer": "a"
+  },
+  {
+    "title": "14",
+    "question": "Tám thằng dân vần cục đá tảng \nHai ông xã xách nặng chạy theo \nLà con gì?",
+    "answers": {
+      "a": "Con voi",
+      "b": "Con cua",
+      "c": "Con kiến",
+      "d": "Con rùa"
+    },
+    "correctAnswer": "b"
+  },
+  {
+    "title": "15",
+    "question": "Hè về áo đỏ như son \nHè đi thay lá xanh non mượt mà \nBao nhiêu tay tỏa rộng ra \nNhư vẫy như đón bạn ta đến trường \nLà cây gì?",
+    "answers": {
+      "a": "Cây phượng",
+      "b": "Cây bàng",
+      "c": "Cây xoài",
+      "d": "Cây râm bụt"
+    },
+    "correctAnswer": "a"
+  },
+  {
+    "title": "16",
+    "question": "Cái gì có thể đi lên nhưng không thể đi xuống?",
+    "answers": {
+      "a": "Tuổi tác",
+      "b": "Máy bay",
+      "c": "Thang máy",
+      "d": "Cầu thang"
+    },
+    "correctAnswer": "a"
+  },
+  {
+    "title": "17",
+    "question": "Cái gì có thể đi lên nhưng không thể đi xuống?",
+    "answers": {
+      "a": "Tuổi tác",
+      "b": "Máy bay",
+      "c": "Thang máy",
+      "d": "Cầu thang"
+    },
+    "correctAnswer": "a"
+  },
+  {
+    "title": "18",
+    "question": "Ai là người thường nói chuyện với chính mình những vẫn không bị điên?",
+    "answers": {
+      "a": "Người viết",
+      "b": "Người thợ mộc",
+      "c": "Người bác sĩ",
+      "d": "Người lái xe"
+    },
+    "correctAnswer": "a"
+  },
+  {
+    "title": "19",
+    "question": "Tôi có mặt ở khắp nơi trên thế giới nhưng lại không có hình gì, tôi là gì?",
+    "answers": {
+      "a": "Nước",
+      "b": "Lửa",
+      "c": "Không khí",
+      "d": "Gió"
+    },
+    "correctAnswer": "c"
+  },
+  {
+    "title": "20",
+    "question": "Có một cái cây, cây này không có lá, không có hoa, chỉ có quả, cái cây đó là gì?",
+    "answers": {
+      "a": "Cây bút cam",
+      "b": "Cây dừa",
+      "c": "Cây táo",
+      "d": "Cây bút chì"
+    },
+    "correctAnswer": "d"
+  },
+  {
+    "title": "21",
+    "question": "Cái gì không thể giữ trong tay nhưng vẫn có thể khiến bạn hạnh phúc?",
+    "answers": {
+      "a": "Nụ cười",
+      "b": "Người yêu",
+      "c": "Hộp bánh",
+      "d": "Quyển sách"
+    },
+    "correctAnswer": "a"
+  }
+]

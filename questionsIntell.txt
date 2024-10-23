@@ -1,0 +1,123 @@
+[
+  {
+    "title": "1",
+    "question": "Hình bình hành có 2 đường chèo bằng nhau gọi là gì?",
+    "answers": {
+      "a": "Hình thang",
+      "b": "Hình thang cân",
+      "c": "Hình vuông",
+      "d": "Hình chữ nhật"
+    },
+    "correctAnswer": "d"
+  },
+  {
+    "title": "2",
+    "question": "Cái gì đi lên nhưng không thể đi xuống?",
+    "answers": {
+      "a": "Nước",
+      "b": "Tuổi tác",
+      "c": "Thang máy",
+      "d": "Mây"
+    },
+    "correctAnswer": "b"
+  },
+  {
+    "title": "3",
+    "question": "Bạn hãy thực hiện tìm ra số tiếp theo của dãy số: 5, 16, 49, 104,...?",
+    "answers": {
+      "a": "181",
+      "b": "105",
+      "c": "118",
+      "d": "150"
+    },
+    "correctAnswer": "a"
+  },
+  {
+    "title": "4",
+    "question": "Khi đồng hồ chỉ 3 giờ 30 phút thì kim giờ và kim phút tạo ra một góc bao nhiêu độ?",
+    "answers": {
+      "a": "45 độ",
+      "b": "7749 độ",
+      "c": "90 độ",
+      "d": "30 độ"
+    },
+    "correctAnswer": "c"
+  },
+  {
+    "title": "5",
+    "question": "Con sông dài nhất thế giới là sông nào?",
+    "answers": {
+      "a": "Sông Nile",
+      "b": "Sông Amazon",
+      "c": "Sông Misisippi",
+      "d": "Sông Cửu Long"
+    },
+    "correctAnswer": "a"
+  },
+  {
+    "title": "6",
+    "question": "Lưu không cao hơn Quân \n Quân thì thấp hơn Mến \n Nhưng Mến lại thấp hơn Lưu \n Hỏi ai cao nhất?",
+    "answers": {
+      "a": "Quân",
+      "b": "Mến",
+      "c": "Lưu",
+      "d": "Ông hàng xóm"
+    },
+    "correctAnswer": "c"
+  },
+  {
+    "title": "7",
+    "question": "Cái gì có thể cắt được nhưng không thể ăn được?",
+    "answers": {
+      "a": "Bánh",
+      "b": "Thịt",
+      "c": "Giấy",
+      "d": "Rau"
+    },
+    "correctAnswer": "c"
+  },
+  {
+    "title": "8",
+    "question": "Cái gì luôn đầy nhưng không bao giờ tràn?",
+    "answers": {
+      "a": "Cái bát",
+      "b": "Cái cốc",
+      "c": "Thùng chứa",
+      "d": "Mạng lưới thông tin"
+    },
+    "correctAnswer": "d"
+  },
+  {
+    "title": "9",
+    "question": "Ruột thẳng băng \nKhi thịt bị cắt khỏi thân \nThì ruột lòi dần vẫn thẳng như rưới?",
+    "answers": {
+      "a": "Cái ống hút",
+      "b": "Cái thước",
+      "c": "Con rắn",
+      "d": "Cây bút chì"
+    },
+    "correctAnswer": "d"
+  },
+  {
+    "title": "10",
+    "question": "Có chân mà chẳng biết đi \nCó mặt phẳng lì chi kẻ ngồi trên \nLà cái gì?",
+    "answers": {
+      "a": "Cái ghế",
+      "b": "Cái bàn",
+      "c": "Cái quạt",
+      "d": "Cái tủ"
+    },
+    "correctAnswer": "a"
+  },
+    {
+    "title": "11",
+    "question": "Để bảo vệ vỏ tàu biển bằng thép, người ta thường gắn vào vỏ tàu (phần ngâm dưới nước) những tấm kim loại làm bằng gì?",
+    "answers": {
+      "a": "Zn",
+      "b": "Cu",
+      "c": "Ag",
+      "d": "Pb"
+    },
+    "correctAnswer": "a"
+  }
+]
