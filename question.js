@@ -24,6 +24,9 @@ function loadQuestionsTrivia() {
 let currentQuestionIndex = parseInt(
   localStorage.getItem("currentQuestionIndex")
 );
+let currentQuestionIndexTemp = parseInt(
+  localStorage.getItem("currentQuestionIndexTemp")
+);
 console.log("====================================");
 console.log(currentQuestionIndex);
 console.log("====================================");
@@ -140,19 +143,21 @@ function disableButtons() {
 }
 btnBack.addEventListener("click", () => {
   if (currentQuestionIndex > 0) {
-    localStorage.setItem("index", currentQuestionIndex);
-    localStorage.setItem(
-      "currentQuestionIndex",
-      currentQuestionIndex - 1
-    )((window.location.href = "questionscreen.html"));
+    localStorage.setItem("currentQuestionIndex", currentQuestionIndex - 1);
+    localStorage.setItem("canNext", "true");
+    window.location.href = "questionscreen.html";
   }
 });
 btnNext.addEventListener("click", () => {
-  if (currentQuestionIndex <= localStorage.getItem("index")) {
-    localStorage.setItem(
-      "currentQuestionIndex",
-      currentQuestionIndex + 1
-    )((window.location.href = "questionscreen.html"));
+  if (localStorage.getItem("canNext") === "true") {
+    localStorage.setItem("currentQuestionIndex", currentQuestionIndex + 1);
+    if (
+      parseInt(localStorage.getItem("currentQuestionIndex")) ===
+      currentQuestionIndexTemp
+    ) {
+      localStorage.setItem("canNext", "false");
+    }
+    window.location.href = "questionscreen.html";
   }
 });
 // Làm nổi bật và nhấp nháy đáp án đúng
