@@ -58,7 +58,7 @@
     "title": "6",
     "question": "Con gì có chân nhưng không biết đi?",
     "answers": {
-      "a": "Con nít",
+      "a": "Con ruồi",
       "b": "Con lừa",
       "c": "Con voi",
       "d": "Con rắn"
@@ -69,7 +69,7 @@
     "title": "7",
     "question": "Con gì đầu dê mình ốc?",
     "answers": {
-      "a": "Con sên",
+      "a": "Con dốc",
       "b": "Con cừu",
       "c": "Con voi",
       "d": "Con ếch"
@@ -177,14 +177,14 @@
   },
   {
     "title": "17",
-    "question": "Cái gì có thể đi lên nhưng không thể đi xuống?",
+    "question": "Đuôi thì chẳng thấy mà có hai đầu, là cái gì?",
     "answers": {
-      "a": "Tuổi tác",
-      "b": "Máy bay",
-      "c": "Thang máy",
-      "d": "Cầu thang"
+      "a": "Cái chổi",
+      "b": "Cây cầu",
+      "c": "Cây bút",
+      "d": "Cái thang"
     },
-    "correctAnswer": "a"
+    "correctAnswer": "b"
   },
   {
     "title": "18",

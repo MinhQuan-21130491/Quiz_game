@@ -1,7 +1,7 @@
 [
   {
     "title": "1",
-    "question": "Hình bình hành có 2 đường chèo bằng nhau gọi là gì?",
+    "question": "Hình bình hành có 2 đường chéo bằng nhau gọi là gì?",
     "answers": {
       "a": "Hình thang",
       "b": "Hình thang cân",

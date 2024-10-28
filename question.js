@@ -115,8 +115,6 @@ function checkAnswer(selectedAnswerButton, selectedAnswer) {
   setTimeout(() => {
     const currentQuestion = questions[currentQuestionIndex];
     const isCorrect = selectedAnswer === currentQuestion.correctAnswer;
-
-    // Thêm hiệu ứng nhấp nháy cho đáp án đúng
     highlightCorrectAnswerWithBlink();
 
     // Nếu câu trả lời là đúng
@@ -141,6 +139,11 @@ function disableButtons() {
     answerButtons[key].classList.add("no-hover"); // Thêm lớp no-hover để vô hiệu hóa hover
   }
 }
+function unDisableButtons() {
+  for (let key in answerButtons) {
+    answerButtons[key].classList.remove("no-hover"); // Thêm lớp no-hover để vô hiệu hóa hover
+  }
+}
 btnBack.addEventListener("click", () => {
   if (currentQuestionIndex > 0) {
     localStorage.setItem("currentQuestionIndex", currentQuestionIndex - 1);
@@ -162,6 +165,7 @@ btnNext.addEventListener("click", () => {
 });
 // Làm nổi bật và nhấp nháy đáp án đúng
 function highlightCorrectAnswerWithBlink() {
+  disableButtons();
   let questions = "";
   if (getTypeQuestion("type") === "cauhoitritue") {
     questions = questionsIntell;
