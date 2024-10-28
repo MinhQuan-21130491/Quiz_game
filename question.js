@@ -47,7 +47,8 @@ const correctSound = document.getElementById("correct-sound");
 const wrongSound = document.getElementById("wrong-sound");
 const nextButton = document.getElementById("btn-next");
 const timerElement = document.getElementById("timer");
-
+const correctAnswer = document.getElementById("correct-answer");
+const btnAnswer = document.getElementById("btn-answer");
 let timeLeft = 15; // Đếm ngược 15 giây
 let timerInterval;
 function getTypeQuestion() {
@@ -55,20 +56,29 @@ function getTypeQuestion() {
 }
 // Hiển thị câu hỏi
 function displayQuestion() {
-  console.log(getTypeQuestion());
   let currentQuestion = "";
   if (getTypeQuestion("type") === "cauhoitritue") {
     currentQuestion = questionsIntell[currentQuestionIndex];
   } else if (getTypeQuestion("type") === "cauhoidomeo") {
     currentQuestion = questionsTrivia[currentQuestionIndex];
   }
-
   questionTitleElement.textContent = "Câu hỏi " + currentQuestion.title + ":";
   questionElement.textContent = currentQuestion.question;
   answerButtons.a.textContent = currentQuestion.answers.a;
   answerButtons.b.textContent = currentQuestion.answers.b;
   answerButtons.c.textContent = currentQuestion.answers.c;
   answerButtons.d.textContent = currentQuestion.answers.d;
+  if (localStorage.getItem("canNext") === "true") {
+    correctAnswer.classList.remove("hidden");
+    btnAnswer.classList.add("hidden");
+    const cr = currentQuestion.correctAnswer;
+    console.log("cr", cr);
+    console.log("cr", answerButtons[cr]);
+    correctAnswer.textContent = answerButtons[cr].textContent;
+  } else {
+    correctAnswer.classList.add("hidden");
+    btnAnswer.classList.remove("hidden");
+  }
 }
 
 // Bắt đầu đếm ngược thời gian
@@ -110,7 +120,6 @@ function checkAnswer(selectedAnswerButton, selectedAnswer) {
   // Tô màu vàng cho câu trả lời được chọn
   selectedAnswerButton.style.backgroundColor = "#ffcc33";
   disableButtons(); // Vô hiệu hóa tất cả các nút sau khi chọn câu trả lời
-  console.log(questions);
   // Chờ 2 giây để hiển thị đáp án đúng
   setTimeout(() => {
     const currentQuestion = questions[currentQuestionIndex];

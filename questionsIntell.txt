@@ -56,7 +56,7 @@
   },
   {
     "title": "6",
-    "question": "Lưu không cao hơn Quân \n Quân thì thấp hơn Mến \n Nhưng Mến lại thấp hơn Lưu \n Hỏi ai cao nhất?",
+    "question": "Lưu không cao bằng Quân \n Quân thì thấp hơn Mến \n Nhưng Mến lại thấp hơn Lưu \n Hỏi ai cao nhất?",
     "answers": {
       "a": "Quân",
       "b": "Mến",

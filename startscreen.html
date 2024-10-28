@@ -125,6 +125,7 @@ function loadQuestionsTrivia() {
     }
     const bgSound = document.getElementById("bg-sound");
     window.onload = function () {
+        localStorage.setItem("canNext", "false");
         bgSound.play()
         loadQuestionsIntell();
         loadQuestionsTrivia();

@@ -15,11 +15,14 @@
             <h1 id = "question-title">Câu hỏi 1:</h1>
             <pre id = "question">Con bò màu gì?</pre>
         </div>
-        <div class="btn-answer">
+        <div class="btn-answer hidden" id = "btn-answer">
             <button class="txtbtn" id = "btn-A" value="a">Xanh</button>
             <button class="txtbtn" id = "btn-B" value="b">Đỏ</button>
             <button class="txtbtn" id = "btn-C" value="c">Tím</button>
             <button class="txtbtn" id = "btn-D" value="d">Vàng</button>
+        </div>
+        <div class="btn-correct-answer">
+            <button class="txtBtn-correct hidden" id ='correct-answer'>Đỏ</button>
         </div>
         <div id="btn-next">
             <p class="txtbtn">Next</p>
@@ -97,8 +100,9 @@
     width: 100%;
     max-width: 400px; 
     margin: 60px auto; 
+
 }
-.btn-answer button {
+.btn-answer .txtbtn {
     flex: 1 1 40%; 
     margin: 15px; 
     padding: 20px 10px; 
@@ -135,6 +139,18 @@
 .txtbtn {
 font-weight: bold;
 margin: 0;
+}
+.txtBtn-correct {
+    font-weight: bold;
+    margin: 0;
+    flex: 0 0 40%; 
+    margin: auto; 
+    padding: 20px 0px; 
+    font-size: 16px; 
+    cursor: pointer;
+    background-color: #33cc33;
+    border-width: 0;
+    border-radius: 10px;
 }
 #btn-back {
     width: 40px;
@@ -176,6 +192,21 @@ margin: 0;
 .no-hover {
     pointer-events: none; /* Ngăn chặn tất cả các sự kiện chuột */
 
+}
+.hidden {
+    display: none;
+}
+.visible {
+    visibility: visible;
+}
+.btn-correct-answer {
+    display: flex;
+    flex-wrap: wrap; 
+    justify-content: space-between; 
+    width: 100%;
+    max-width: 400px; 
+    margin: 60px auto; 
+    z-index: 1000;
 }
 </style>
 <script src="question.js"> </script>
