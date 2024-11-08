@@ -86,7 +86,7 @@ body {
 
 .message-panel {
     margin: auto;
-    background-color: #f8b26a;
+    background-color: #F2B873;
     border-radius: 100px;
     padding: 48px;
     min-height: 200px;
@@ -105,8 +105,9 @@ body {
 }
 
 .message {
-    font-size: 36px;
-    color: white; /* Red color for emphasis */
+    font-family: 'Inter';
+    font-size: 48px;
+    color: #ffffff; /* Red color for emphasis */
     margin-top: 20px;
 }
 .next-button {
@@ -153,9 +154,6 @@ body {
     display: block; /* Show the message panel */
     opacity: 1; /* Fade in */
 }
-
-
-
 .next-button.show {
     opacity: 1; /* Fade in */
 }
