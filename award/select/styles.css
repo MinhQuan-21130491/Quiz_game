@@ -37,7 +37,7 @@ body {
     height: 100vh;
     margin: 0;
     padding: 0;
-    font-family: Arial, sans-serif;
+    font-family: 'Inter';
     background-color: #f0f0f0;
     background-image: url('https://static.vecteezy.com/system/resources/previews/009/877/673/non_2x/pixel-art-sky-background-with-clouds-cloudy-blue-sky-for-8bit-game-on-white-background-vector.jpg'); /* Replace with your background image */
     background-size: cover;
@@ -48,17 +48,17 @@ body {
     width: 90%;
     max-width: 1200px;
     height: 90%;
-        max-height: 600px;
-        background-image: url("/assets/images/background-2.jpg");
-        background-size: cover; /* Ensures the image covers the entire area */
-        background-position: center; /* Centers the image within the body */
-        background-repeat: no-repeat; /* Prevents the image from repeating */
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        border-radius: 10px;
-        position: relative;
+    max-height: 600px;
+    background-image: url("/assets/images/background-2.jpg");
+    background-size: cover; /* Ensures the image covers the entire area */
+    background-position: center; /* Centers the image within the body */
+    background-repeat: no-repeat; /* Prevents the image from repeating */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    position: relative;    
 
 }
 
