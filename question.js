@@ -27,10 +27,6 @@ let currentQuestionIndex = parseInt(
 let currentQuestionIndexTemp = parseInt(
   localStorage.getItem("currentQuestionIndexTemp")
 );
-console.log("====================================");
-console.log(currentQuestionIndex);
-console.log("====================================");
-
 // Lấy các phần tử DOM
 const questionTitleElement = document.getElementById("question-title");
 const btnNext = document.getElementById("btn-next");
@@ -49,7 +45,7 @@ const nextButton = document.getElementById("btn-next");
 const timerElement = document.getElementById("timer");
 const correctAnswer = document.getElementById("correct-answer");
 const btnAnswer = document.getElementById("btn-answer");
-let timeLeft = 15; // Đếm ngược 15 giây
+let timeLeft = localStorage.getItem("timeLeft");
 let timerInterval;
 function getTypeQuestion() {
   return localStorage.getItem("type");
@@ -70,10 +66,9 @@ function displayQuestion() {
   answerButtons.d.textContent = currentQuestion.answers.d;
   if (localStorage.getItem("canNext") === "true") {
     correctAnswer.classList.remove("hidden");
+
     btnAnswer.classList.add("hidden");
     const cr = currentQuestion.correctAnswer;
-    console.log("cr", cr);
-    console.log("cr", answerButtons[cr]);
     correctAnswer.textContent = answerButtons[cr].textContent;
   } else {
     correctAnswer.classList.add("hidden");
@@ -85,7 +80,7 @@ function displayQuestion() {
 function startTimer() {
   timerElement.textContent = timeLeft < 10 ? `0${timeLeft}` : timeLeft;
   timerInterval = setInterval(() => {
-    timeLeft--;
+    localStorage.setItem("timeLeft", --timeLeft);
     timerElement.textContent = timeLeft < 10 ? `0${timeLeft}` : timeLeft;
     // Phát âm thanh mỗi giây
     timerSound.currentTime = 0; // Đặt lại thời gian âm thanh về đầu
@@ -163,6 +158,8 @@ btnBack.addEventListener("click", () => {
 btnNext.addEventListener("click", () => {
   if (localStorage.getItem("canNext") === "true") {
     localStorage.setItem("currentQuestionIndex", currentQuestionIndex + 1);
+    localStorage.setItem("timeLeft", 15);
+
     if (
       parseInt(localStorage.getItem("currentQuestionIndex")) ===
       currentQuestionIndexTemp
@@ -228,5 +225,7 @@ for (let key in answerButtons) {
 window.onload = function () {
   loadQuestionsIntell();
   loadQuestionsTrivia();
-  startTimer();
+  if (localStorage.getItem("canNext") === "false") {
+    startTimer();
+  }
 };

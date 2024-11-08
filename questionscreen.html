@@ -23,7 +23,7 @@
             <button class="txtbtn" id = "btn-C" value="c">Tím</button>
             <button class="txtbtn" id = "btn-D" value="d">Vàng</button>
         </div>
-        <div class="btn-correct-answer">
+        <div class="btn-correct-answer disabled">
             <button class="txtBtn-correct hidden" id ='correct-answer'>Đỏ</button>
         </div>
         <div id="btn-next">
@@ -63,7 +63,6 @@
     }
     #question-title {
         font-family: 'Inter';
-        font-style: italic;
     }
     .container {
         width: 90%;
@@ -215,6 +214,9 @@ margin: 0;
     max-width: 400px; 
     margin: 60px auto; 
     z-index: 1000;
+}
+.disabled {
+    pointer-events: none;
 }
 </style>
 <script src="question.js"> </script>

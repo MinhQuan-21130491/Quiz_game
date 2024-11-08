@@ -13,7 +13,7 @@ document.querySelector(".next-button").addEventListener("click", function () {
     const prevIndex = parseInt(localStorage.getItem("currentQuestionIndex"));
     localStorage.setItem("currentQuestionIndex", prevIndex + 1);
     localStorage.setItem("currentQuestionIndexTemp", prevIndex + 1);
-
+    localStorage.setItem("timeLeft", 15);
     window.location.href = "../../questionscreen.html";
   }, 600); // Adjust the delay to match the length of your animation
 
