@@ -13,7 +13,6 @@ function playClickSound() {
 document.addEventListener("DOMContentLoaded", function () {
   const boomElement = document.querySelector(".boom");
   const messagePanel = document.getElementById("messagePanel");
-  const nextButton = document.getElementById("nextButton");
   // Trigger the explosion animation after a delay
   setTimeout(() => {
     boomElement.style.animation = "explode 2s forwards"; // Start the explosion
@@ -23,47 +22,32 @@ document.addEventListener("DOMContentLoaded", function () {
   boomElement.addEventListener("animationend", () => {
     // Show the message panel and button with fade-in effect
     messagePanel.classList.add("show"); // Add class to trigger CSS transition
-
-    const nextButton = document.getElementById("nextButton");
-
-    const currentQuestionIndex = parseInt(
-      localStorage.getItem("currentQuestionIndex")
-    );
-    const lengthQuestionIntell = parseInt(
-      localStorage.getItem("lengthQuestionIntell")
-    );
-    const lengthQuestionTrivia = parseInt(
-      localStorage.getItem("lengthQuestionTrivia")
-    );
-    const questionType = localStorage.getItem("type"); // Lấy loại câu hỏi
-
-    // Kiểm tra xem câu hỏi hiện tại có phải là câu hỏi cuối cùng không
-    let isLastQuestion = false;
-
-    if (questionType === "cauhoitritue") {
-      isLastQuestion = currentQuestionIndex >= lengthQuestionIntell - 1;
-    } else if (questionType === "cauhoidomeo") {
-      isLastQuestion = currentQuestionIndex >= lengthQuestionTrivia - 1;
-    }
-
-    // Ẩn nút "Next" nếu là câu hỏi cuối cùng
-    if (isLastQuestion) {
-      nextButton.classList.add("next-button-hide");
-      setTimeout(function () {
-        alert("Đã hết câu hỏi!");
-      }, 3000);
-    } else {
-      nextButton.classList.remove("next-button-hide");
-    }
+    nextButton.classList.remove("next-button-hide");
   });
 
-  // Chuyển đến câu hỏi tiếp theo
-  nextButton.addEventListener("click", () => {
-    const prevIndex = parseInt(localStorage.getItem("currentQuestionIndex"));
-    localStorage.setItem("currentQuestionIndex", prevIndex + 1);
-    localStorage.setItem("currentQuestionIndexTemp", prevIndex + 1);
-    localStorage.setItem("timeLeft", 15);
-    window.location.href = "../questionscreen.html";
+  document.querySelector(".next-button").addEventListener("click", function () {
+    let lenghtQuestion = 0;
+    setTimeout(function () {
+      if (localStorage.getItem("type") === "cauhoitritue") {
+        lenghtQuestion = localStorage.getItem("lengthQuestionIntell");
+      } else {
+        lenghtQuestion = localStorage.getItem("lengthQuestionTrivia");
+      }
+      const prevIndex = parseInt(localStorage.getItem("currentQuestionIndex"));
+      localStorage.setItem("currentQuestionIndex", prevIndex + 1);
+      localStorage.setItem("currentQuestionIndexTemp", prevIndex + 1);
+      localStorage.setItem("timeLeft", 15);
+      if (localStorage.getItem("currentQuestionIndex") < lenghtQuestion) {
+        console.log("1");
+        window.location.href = "../../questionscreen.html";
+      } else {
+        console.log("2");
+        alert("Đã hết câu hỏi!");
+        window.location.href = "../../index.html";
+      }
+    }, 600); // Adjust the delay to match the length of your animation
+
+    playClickSound();
   });
 });
 // Function to get a random line from the text file

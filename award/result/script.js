@@ -9,12 +9,25 @@ function playClickSound() {
 }
 
 document.querySelector(".next-button").addEventListener("click", function () {
+  let lenghtQuestion = 0;
   setTimeout(function () {
+    if (localStorage.getItem("type") === "cauhoitritue") {
+      lenghtQuestion = localStorage.getItem("lengthQuestionIntell");
+    } else {
+      lenghtQuestion = localStorage.getItem("lengthQuestionTrivia");
+    }
     const prevIndex = parseInt(localStorage.getItem("currentQuestionIndex"));
     localStorage.setItem("currentQuestionIndex", prevIndex + 1);
     localStorage.setItem("currentQuestionIndexTemp", prevIndex + 1);
     localStorage.setItem("timeLeft", 15);
-    window.location.href = "../../questionscreen.html";
+    if (localStorage.getItem("currentQuestionIndex") < lenghtQuestion) {
+      console.log("1");
+      window.location.href = "../../questionscreen.html";
+    } else {
+      console.log("2");
+      alert("Đã hết câu hỏi!");
+      window.location.href = "../../index.html";
+    }
   }, 600); // Adjust the delay to match the length of your animation
 
   playClickSound();
