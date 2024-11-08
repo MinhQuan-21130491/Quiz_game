@@ -125,6 +125,7 @@ function checkAnswer(selectedAnswerButton, selectedAnswer) {
     if (isCorrect) {
       correctSound.play();
       timerSound.pause();
+      getRandomAward();
       setTimeout(function () {
         window.location.href = "/award/select/index.html";
       }, 2000);
@@ -137,6 +138,32 @@ function checkAnswer(selectedAnswerButton, selectedAnswer) {
       selectedAnswerButton.style.backgroundColor = "red";
     }
   }, 1000); // Thời gian đợi 2 giây trước khi hiển thị kết quả
+}
+function getRandomAward() {
+  fetch("/award/result/data.txt") // Path to your text file
+    .then((response) => response.text())
+    .then((data) => {
+      const lines = data.split("\n"); // Split the content into an array of lines
+      const randomIndex = Math.floor(Math.random() * lines.length); // Generate a random index
+      const randomLine = lines[randomIndex]; // Get a random line
+      localStorage.setItem("award", randomLine);
+    })
+    .catch((error) => {
+      console.error("Error fetching the file:", error); // Handle any errors
+    });
+}
+function getRandomPenalty() {
+  fetch("/penalty/data.txt") // Path to your text file
+    .then((response) => response.text())
+    .then((data) => {
+      const lines = data.split("\n"); // Split the content into an array of lines
+      const randomIndex = Math.floor(Math.random() * lines.length); // Generate a random index
+      const randomLine = lines[randomIndex]; // Get a random line
+      localStorage.setItem("penalty", randomLine);
+    })
+    .catch((error) => {
+      console.error("Error fetching the file:", error); // Handle any errors
+    });
 }
 function disableButtons() {
   for (let key in answerButtons) {

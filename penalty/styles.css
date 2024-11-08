@@ -30,12 +30,6 @@ body {
 
 }
 
-.header {
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-}
-
 #img_team {
     position:absolute;
     width: 150px;

@@ -37,11 +37,12 @@ document.addEventListener("DOMContentLoaded", function () {
       localStorage.setItem("currentQuestionIndex", prevIndex + 1);
       localStorage.setItem("currentQuestionIndexTemp", prevIndex + 1);
       localStorage.setItem("timeLeft", 15);
-      if (localStorage.getItem("currentQuestionIndex") < lenghtQuestion) {
-        console.log("1");
+
+      if (
+        parseInt(localStorage.getItem("currentQuestionIndex")) < lenghtQuestion
+      ) {
         window.location.href = "../../questionscreen.html";
       } else {
-        console.log("2");
         alert("Đã hết câu hỏi!");
         window.location.href = "../../index.html";
       }
@@ -51,23 +52,14 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 // Function to get a random line from the text file
-function getRandomLine() {
-  fetch("data.txt") // Path to your text file
-    .then((response) => response.text())
-    .then((data) => {
-      const lines = data.split("\n"); // Split the content into an array of lines
-      const randomIndex = Math.floor(Math.random() * lines.length); // Generate a random index
-      const randomLine = lines[randomIndex]; // Get a random line
-      document.getElementById("penaltyMessage").innerText = randomLine; // Display it in the <p>
-    })
-    .catch((error) => {
-      console.error("Error fetching the file:", error); // Handle any errors
-    });
+function getPenalty() {
+  document.getElementById("penaltyMessage").innerText =
+    localStorage.getItem("penalty"); // Display it in the <p>
 }
 
 function init() {
   document.getElementById("boomSound").play(); // disable
-  getRandomLine();
+  getPenalty();
   nextButton.classList.add("next-button-hide");
 }
 const homeBtn = document.getElementById("img_team");
