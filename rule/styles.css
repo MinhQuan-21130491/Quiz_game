@@ -55,25 +55,21 @@ body {
     object-fit: contain;
     cursor: pointer;
 }
-
-
-
-
 .rule-box {
     margin: auto;
-    background-color: #f8b26a;
-    border-radius: 100px;
+    background-color: #F2B873;
+    border-radius: 92px;
     padding: 48px;
     width: 50%;
     min-height: 300px;
     text-align: center;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.8);
 }
 
 .rule-box li {
     font-size: 16px;
-    color: rgb(8, 8, 8);
+    color:#FFFFFF;
     text-align: start;
     line-height:30px;
+    font-family: 'Inter';
 }
 
