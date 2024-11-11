@@ -82,7 +82,7 @@
     "answers": {
       "a": "Voi",
       "b": "Ngựa",
-      "c": "Cá mập",
+      "c": "Ốc sên",
       "d": "Con rắn"
     },
     "correctAnswer": "c"
@@ -188,7 +188,7 @@
   },
   {
     "title": "18",
-    "question": "Ai là người thường nói chuyện với chính mình những vẫn không bị điên?",
+    "question": "Ai là người thường nói chuyện với chính mình nhưng vẫn không bị điên?",
     "answers": {
       "a": "Người viết",
       "b": "Người thợ mộc",
