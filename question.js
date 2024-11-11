@@ -132,6 +132,7 @@ function checkAnswer(selectedAnswerButton, selectedAnswer) {
     } else {
       wrongSound.play();
       timerSound.pause();
+      getRandomPenalty();
       setTimeout(function () {
         window.location.href = "/penalty/index.html";
       }, 2000);
